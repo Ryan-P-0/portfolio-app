@@ -18,14 +18,12 @@ import {
 } from '@chakra-ui/react';
 import {
   FiHome,
-  FiTrendingUp,
-  FiCompass,
   FiStar,
-  FiSettings,
   FiMenu,
 } from 'react-icons/fi';
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
+import { usePathname } from 'next/navigation'
 
 interface LinkItemProps {
   name: string;
@@ -34,11 +32,12 @@ interface LinkItemProps {
 }
 const LinkItems: Array<LinkItemProps> = [
   { name: 'Home', icon: FiHome, route: "/" },
-  { name: 'Projects', icon: FiStar, route: "/projects/" },
+  { name: 'Projects', icon: FiStar, route: "/projects" },
 ];
 
 export default function SimpleSidebar({ children }: { children: ReactNode }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
       <SidebarContent
@@ -71,6 +70,8 @@ interface SidebarProps extends BoxProps {
 }
 
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
+  const pathname = usePathname();
+
   return (
     <Box
       bg={useColorModeValue('white', 'gray.900')}
@@ -87,7 +88,13 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon} href={link.route}>
+        <NavItem 
+          key={link.name} 
+          icon={link.icon} 
+          href={link.route} 
+          backgroundColor={pathname === link.route ? "#0BC5EA" : ""} 
+          color={pathname === link.route ? "#FFFFFF" : ""}
+        >
           {link.name}
         </NavItem>
       ))}
