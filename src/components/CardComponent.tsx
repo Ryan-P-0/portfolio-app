@@ -2,19 +2,15 @@
 
 import { Card, CardBody, Heading, Stack, Text, Image, Link } from "@chakra-ui/react";
 
-const CardComponent = ({ title, href, w, h }) => {
+const CardComponent = ({ title, description, linkHref, imgSrc }) => {
   return (
-    <Link href={href} style={{ textDecoration: 'none' }}>
-      <Card w={w} h={h}>
+    <Link href={linkHref} style={{ textDecoration: 'none' }}>
+      <Card w={379} h={379}>
         <CardBody>
-          <Image
-            src='loadlink-app.png'
-            alt={title}
-            borderRadius='lg'
-          />
+          <Image src={imgSrc} alt={title} borderRadius='lg' />
           <Stack mt='6' spacing='3'>
             <Heading size='md'>{title}</Heading>
-            <Text>A React and Wordpress Headless CMS web application for a nation-wide transport company.</Text>
+            <Text>{description}</Text>
           </Stack>
         </CardBody>
       </Card>
