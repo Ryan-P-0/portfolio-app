@@ -11,7 +11,7 @@ export default function Projects() {
           <WrapItem>
             <CardComponent 
               title="LoadLink" 
-              description="A React and Wordpress Headless CMS web application for a nation-wide transport company."
+              description="A React and WordPress Headless CMS web application for a nation-wide transport company."
               linkHref="/projects/loadlink/" 
               imgSrc="loadlink-app.png"
             />
