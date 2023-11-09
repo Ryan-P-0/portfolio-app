@@ -11,7 +11,6 @@ import {
   Link,
   Drawer,
   DrawerContent,
-  Text,
   useDisclosure,
   BoxProps,
   FlexProps,
@@ -84,7 +83,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       h="full"
       {...rest}>
       <Flex h="20" alignItems="center" mx={8} my={14} justifyContent="center">
-        <Image src="logo.jpg" alt="logo.jpg" w={150} h={150} borderRadius="50%" />
+        <Image src="/logo.jpg" alt="logo.jpg" w={150} h={150} borderRadius="50%" />
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (

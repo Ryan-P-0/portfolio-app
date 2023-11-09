@@ -3,7 +3,6 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import TechSkills from "@/components/TechSkills";
 
-// Fix sidebar logo not working in LoadLink project page
 // Make site responsive
 // Fix sidebar active/hover background color logic
 // Add animations to projects cards
