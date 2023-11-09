@@ -5,9 +5,9 @@ import { BsLink45Deg } from "react-icons/bs";
 
 const Project = ({ projectName, projectLink, projectOutline, projectRole, projectFeatures }) => {
     return (
-        <Box as="main" m={5}>
-            <Text as="h1" fontSize="3.5em" fontWeight="500" my={5}>{projectName}</Text>
-            <Box bg="tyrianPurple.100" p={5}>
+        <Box as="main" m={{ base: 0, md: 5 }}>
+            <Text as="h1" fontSize="3.5em" fontWeight="500" my={{ base: 0, md: 5 }}>{projectName}</Text>
+            <Box bg="tyrianPurple.100" p={{ base: 0, md: 5 }}>
                 <Flex>
                     <a href={projectLink} target="_blank">
                         <Flex alignItems="center" gap={1}>
@@ -16,32 +16,34 @@ const Project = ({ projectName, projectLink, projectOutline, projectRole, projec
                         </Flex>
                     </a>
                 </Flex>
-                <Box as="ul">
-                    <Box as="li" m={5}>
+                <Box>
+                    <Box mt={5}>
                         <Text color="tyrianPurple.500" fontWeight="bold">Project Outline</Text>
                         {
-                            projectOutline.map(paragraph => (
-                                <p>{paragraph}</p>
+                            projectOutline.map((paragraph, index) => (
+                                <Text mt={index !== 0 ? 2 : 0}>{paragraph}</Text>
                             ))
                         }
                     </Box>
-                    <Box as="li" m={5}>
+                    <Box mt={5}>
                         <Text color="tyrianPurple.500" fontWeight="bold">My Role in the Project</Text>
                         {
-                            projectRole.map(paragraph => (
-                                <p>{paragraph}</p>
+                            projectRole.map((paragraph, index) => (
+                                <Text mt={index !== 0 ? 2 : 0}>{paragraph}</Text>
                             ))
                         }
                     </Box>
                 </Box>
                 <Box>
-                    <Text as="h2" fontSize="1.5em">Application Features</Text>
-                    <Box as="ul">
-                        {
-                            projectFeatures.map(listItem => (
-                                <Box as="li" mx={5}>{listItem}</Box>
-                            ))
-                        }
+                    <Box mt={5}>
+                        <Text color="tyrianPurple.500" fontWeight="bold">Application Features</Text>
+                        <Box as="ul">
+                            {
+                                projectFeatures.map(listItem => (
+                                    <Box as="li" mx={5}>{listItem}</Box>
+                                ))
+                            }
+                        </Box>
                     </Box>
                 </Box>
             </Box>

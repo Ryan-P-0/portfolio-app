@@ -8,7 +8,7 @@ const TechSkills = ({ tech, skills }) => {
         <Box mb={5}>
             <Image src={`${tech}_logo.svg`} alt={`${tech}_logo.svg`} w={150} h={150} />
         </Box>
-        <Box as="ul">
+        <Box as="ul" minW={280}>
             {
                 skills.map(skill => (
                     <Box key={skill} as="li">{skill}</Box>
