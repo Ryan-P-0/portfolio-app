@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Experienced React Developer',
-  description: 'I am a web developer and programmer with experience in React, including: functional components, React hooks, modern ES6+ JavaScript, TypeScript, Next.js framework, Jest unit testing, Cypress end-to-end testing, and more.',
+  description: 'I am a web developer and programmer with experience in React, including: functional components, React hooks, modern ES6+ JavaScript, TypeScript, Next.js, Jest unit testing, Cypress end-to-end testing, and more.',
 }
 
 export default function RootLayout({

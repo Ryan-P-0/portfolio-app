@@ -2,7 +2,12 @@
 
 import { Box, Flex, Image } from "@chakra-ui/react";
 
-const TechSkills = ({ tech, skills }) => {
+interface TechSkillsProps {
+    tech: string;
+    skills: Array<string>;
+}
+
+const TechSkills = ({ tech, skills }: TechSkillsProps) => {
   return (
     <Flex flexDirection="column" alignItems="center">
         <Box mb={5}>

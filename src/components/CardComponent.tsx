@@ -2,7 +2,14 @@
 
 import { Card, CardBody, Heading, Stack, Text, Image, Link } from "@chakra-ui/react";
 
-const CardComponent = ({ title, description, linkHref, imgSrc }) => {
+interface CardComponentProps {
+  title: string;
+  description: string;
+  linkHref: string;
+  imgSrc: string;
+}
+
+const CardComponent = ({ title, description, linkHref, imgSrc }: CardComponentProps) => {
   return (
     <Link href={linkHref} style={{ textDecoration: 'none' }}>
       <Card w={379} h={379}>

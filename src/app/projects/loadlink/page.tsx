@@ -15,10 +15,19 @@ export default function LoadLink() {
   ];
 
   const projectFeatures = [
-    "Shippers post loads onto the app board for public viewing.",
-    "Each load has its own detailed single page view with all information.",
-    "Carriers may subscribe to the site in order to view a load's shipper contact details.",
-    "...",
+    "Users register as a carrier or a shipper",
+    "Registered users must verify their contact details",
+    "Shippers post loads onto the app board for public viewing",
+    "Carriers post trucks onto the app board for public viewing",
+    "Each load and truck has its own detailed single page view with all information",
+    "Carriers may subscribe to the site in order to view the contact details of the load's shipper",
+    "Shippers may choose to verify their identity and insurance for the sake of authenticity and accountability to carriers",
+    "Carriers create a carrier profile which shippers may view via one of the carrier's posted trucks",
+    "LoadLink staff must review and approve posted loads, trucks, or carrier profiles before they are made public",
+    "Users can archive their posted loads or trucks",
+    "Email notifications for user registration, posted loads, etc.",
+    "Posted loads and trucks are made temporarily public for approximately 30 days (expiry)",
+    "Algorithm which runs on a CRON-schedule to find all loads and trucks within radius and appropriate capacity (truck matching)",
   ];
 
   return (

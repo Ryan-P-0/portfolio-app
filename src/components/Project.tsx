@@ -3,7 +3,15 @@
 import { Box, Text, Flex } from "@chakra-ui/react";
 import { BsLink45Deg } from "react-icons/bs";
 
-const Project = ({ projectName, projectLink, projectOutline, projectRole, projectFeatures }) => {
+interface ProjectProps {
+    projectName: string;
+    projectLink: string;
+    projectOutline: Array<string>;
+    projectRole: Array<string>;
+    projectFeatures: Array<string>;
+}
+
+const Project = ({ projectName, projectLink, projectOutline, projectRole, projectFeatures }: ProjectProps) => {
     return (
         <Box as="main" m={{ base: 0, md: 5 }}>
             <Text as="h1" fontSize="3.5em" fontWeight="500" my={{ base: 0, md: 5 }}>{projectName}</Text>
@@ -21,7 +29,7 @@ const Project = ({ projectName, projectLink, projectOutline, projectRole, projec
                         <Text color="tyrianPurple.500" fontWeight="bold">Project Outline</Text>
                         {
                             projectOutline.map((paragraph, index) => (
-                                <Text mt={index !== 0 ? 2 : 0}>{paragraph}</Text>
+                                <Text key={index} mt={index !== 0 ? 2 : 0}>{paragraph}</Text>
                             ))
                         }
                     </Box>
@@ -29,7 +37,7 @@ const Project = ({ projectName, projectLink, projectOutline, projectRole, projec
                         <Text color="tyrianPurple.500" fontWeight="bold">My Role in the Project</Text>
                         {
                             projectRole.map((paragraph, index) => (
-                                <Text mt={index !== 0 ? 2 : 0}>{paragraph}</Text>
+                                <Text key={index} mt={index !== 0 ? 2 : 0}>{paragraph}</Text>
                             ))
                         }
                     </Box>
@@ -39,8 +47,8 @@ const Project = ({ projectName, projectLink, projectOutline, projectRole, projec
                         <Text color="tyrianPurple.500" fontWeight="bold">Application Features</Text>
                         <Box as="ul">
                             {
-                                projectFeatures.map(listItem => (
-                                    <Box as="li" mx={5}>{listItem}</Box>
+                                projectFeatures.map((listItem, index) => (
+                                    <Box key={index} as="li" mx={5}>{listItem}</Box>
                                 ))
                             }
                         </Box>
