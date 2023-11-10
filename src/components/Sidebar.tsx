@@ -31,8 +31,8 @@ interface LinkItemProps {
   route: string;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Home', icon: FiHome, route: "/" },
-  { name: 'Projects', icon: FiStar, route: "/projects" },
+  { name: 'Home', icon: FiHome, route: "/portfolio-app" },
+  { name: 'Projects', icon: FiStar, route: "/portfolio-app/projects" },
 ];
 
 export default function SimpleSidebar({ children }: { children: ReactNode }) {
@@ -83,7 +83,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       h="full"
       {...rest}>
       <Flex h="20" alignItems="center" mx={8} my={14} justifyContent="center">
-        <Image src="/logo.jpg" alt="logo.jpg" w={150} h={150} borderRadius="50%" />
+        <Image src="/portfolio-app/logo.jpg" alt="logo.jpg" w={150} h={150} borderRadius="50%" />
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (

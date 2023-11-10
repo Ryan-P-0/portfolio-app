@@ -11,7 +11,7 @@ const TechSkills = ({ tech, skills }: TechSkillsProps) => {
   return (
     <Flex flexDirection="column" alignItems="center">
         <Box mb={5}>
-            <Image src={`${tech}_logo.svg`} alt={`${tech}_logo.svg`} w={150} h={150} />
+            <Image src={`/portfolio-app/${tech}_logo.svg`} alt={`/portfolio-app/${tech}_logo.svg`} w={150} h={150} />
         </Box>
         <Box as="ul" minW={280}>
             {
