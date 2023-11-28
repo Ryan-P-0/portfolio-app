@@ -1,19 +1,21 @@
 // app/providers.tsx
 'use client'
 
+import '@fontsource-variable/montserrat/wght.css'
 import { CacheProvider } from '@chakra-ui/next-js'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
-// bg="tyrianPurple.500" etc.
+// bg="customBlue.500" etc.
 const theme = extendTheme({
   colors: {
-    tyrianPurple: {
-      100: "#fff5f9",
-      500: "#b80049",
+    customBlue: {
+      100: "#e3f1fd",
+      500: "#0086ff",
     },
-    tyrianRed: {
-      500: "#990024",
-    },
+  },
+  fonts: {
+    heading: "'Montserrat Variable', sans-serif",
+    body: "'Montserrat Variable', sans-serif",
   },
 });
 

@@ -3,50 +3,27 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import TechSkills from "@/components/TechSkills";
 
-// Fix sidebar active/hover background color logic
-// Add animations to projects cards
-
 export default function Home() {
   return (
     <Box as="main" px={10}>
-      <Text as="h1" fontSize="3.5em" fontWeight="500" my={5}>Ryan P: Experienced React Developer</Text>
+      <Text as="h1" fontSize="3.5em" fontWeight={700}>Experienced Web Developer</Text>
+      <Text fontWeight={700} color="customBlue.500">Ryan Pittock</Text>
       <Box>
-        <Text my={5}>I am a web developer and programmer with experience in React, including: functional components, React hooks, modern ES6+ JavaScript, TypeScript, Next.js, Jest unit testing, Cypress end-to-end testing, and more.</Text>
-        <Text my={5}>I first got into programming when I was in school through basic HTML+CSS webpages, which naturally progressed to learning basic vanilla JavaScript code. I then moved on further into fundamental object-oriented programming concepts and picked up languages such as Java, C# and Python; my next step was to focus on web development since that is the most popular branch of programming and the most practical, and ever since then I have primarily focused on modern JavaScript frameworks: specifically React and Next.js.</Text>
-        <Text my={5}>I have worked in a web development company on the Gold Coast as part of their development team for over a year. Since they use WordPress for their projects, I very quickly picked up and learnt WordPress - including custom WordPress development and PHP code - despite having no previous experience with it: proving that I am a capable and competent developer who is able to learn new concepts and technology quickly. I am confident in my abilities and I am always up for the challenge.</Text>
-        <Text my={5}>I also have some knowledge of Python syntax since I like the language and its ease of use for the purposes of writing scripts etc.</Text>
-        <Text fontWeight={700}>Below is a summary of my skillset:</Text>
+        <Text my={3} maxW="800px">I am an experienced web developer and programmer with a background in React and WordPress.</Text>
+        <Text my={3} maxW="800px">I have worked in a web development company on the Gold Coast as part of their development team for over a year. Working with this company is what introduced me to WordPress development since they use it for their projects; I can prove to be highly adaptable and able to learn new concepts and technologies quickly, while I love to continually grow my skillset in this industry and increase the services I can provide to clients and businesses.</Text>
+      </Box>
+      <Box mt={100} mb={10}>
+        <Text fontWeight={700} color="customBlue.500">Services I Provide</Text>
       </Box>
       <Box px={{ base: 0, xl: 250 }}>
         <Flex flexDirection={{ base: "column", xl: "row" }} justifyContent="space-around" gap={5}>
           <TechSkills 
             tech="react" 
-            skills={[
-              "Headless CMS Development",
-              "Functional Components",
-              "React Hooks",
-              "Modern ES6+ JavaScript",
-              "TypeScript",
-              "Next.js",
-              "Node.js",
-              "React Bootstrap",
-              "Chakra UI",
-              "Jest Unit Testing",
-              "Cypress End-to-End Testing",
-            ]} 
+            skills="Create custom functional components and hooks. Develop headless-CMS applications with WordPress. Make API calls using query libraries such as React Query. Implement custom HTML and CSS layouts and styling such as flexbox, grids, etc. as well as frameworks such as Bootstrap, Tailwind CSS, and Chakra UI. Develop with the Next.js framework and deploy on a Vercel server. Test applications with Cypress end-to-end testing and by creating unit tests."
           />
           <TechSkills 
             tech="wp" 
-            skills={[
-              "Custom Plugins and Themes Development",
-              "Hooks and Filters",
-              "WooCommerce",
-              "Elementor",
-              "Post Types and Meta Fields",
-              "WP REST API",
-              "WP Queries",
-              "PHP Programming",
-            ]} 
+            skills="Develop numerous custom plugins and themes using PHP code. Effectively modify existing plugins/themes via hooks and filters. Create a WooCommerce ecommerce site for your business. Easily implement any web design into your site with Elementor page builder. Create custom post types and meta fields to define any kind of complex data for your website or application. Host and maintain your WordPress website including keeping plugins/themes and WordPress core up-to-date. Allow you to change your website's content at any time through the site dashboard."
           />
         </Flex>
       </Box>

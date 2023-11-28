@@ -43,7 +43,7 @@ export default function SimpleSidebar({ children }: { children: ReactNode }) {
       <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
-        bg="tyrianPurple.100"
+        bg="customBlue.100"
       />
       <Drawer
         autoFocus={false}
@@ -75,7 +75,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
 
   return (
     <Box
-      bg="tyrianPurple.100"
+      bg="customBlue.100"
       borderRight="1px"
       borderRightColor={useColorModeValue('gray.200', 'gray.700')}
       w={{ base: 'full', md: 60 }}
@@ -83,7 +83,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       h="full"
       {...rest}>
       <Flex h="20" alignItems="center" mx={8} my={14} justifyContent="center">
-        <Image src="/portfolio-app/logo.jpg" alt="logo.jpg" w={150} h={150} borderRadius="50%" />
+        <Image src="/portfolio-app/profile.jpeg" alt="/portfolio-app/profile.jpeg" w={150} h={150} borderRadius="50%" />
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
@@ -91,7 +91,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
           key={link.name} 
           icon={link.icon} 
           href={link.route} 
-          bg={pathname === link.route ? "tyrianPurple.500" : ""} 
+          bg={pathname === link.route ? "customBlue.500" : ""} 
           color={pathname === link.route ? "#FFFFFF" : ""}
         >
           {link.name}
@@ -117,7 +117,7 @@ const NavItem = ({ icon, href, children, ...rest }: NavItemProps) => {
         role="group"
         cursor="pointer"
         _hover={{
-          bg: 'tyrianPurple.500',
+          bg: 'customBlue.500',
           color: 'white',
         }}
         {...rest}>
