@@ -1,12 +1,9 @@
 import SimpleSidebar from "@/components/Sidebar";
 import { Providers } from "./providers";
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Experienced React Developer',
-  description: 'I am a web developer and programmer with experience in React, including: functional components, React hooks, modern ES6+ JavaScript, TypeScript, Next.js, Jest unit testing, Cypress end-to-end testing, and more.',
+  title: 'Experienced Web Developer',
+  description: 'I am an experienced web developer and programmer with a background in React and WordPress.',
 }
 
 export default function RootLayout({
@@ -16,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Providers>
           <SimpleSidebar>
             {children}

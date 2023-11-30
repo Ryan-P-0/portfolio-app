@@ -59,7 +59,7 @@ export default function SimpleSidebar({ children }: { children: ReactNode }) {
       </Drawer>
       {/* mobilenav */}
       <MobileNav display={{ base: 'flex', md: 'none' }} onOpen={onOpen} />
-      <Box ml={{ base: 0, md: 60 }} p="4">
+      <Box ml={{ base: 0, md: 60 }}>
         {children}
       </Box>
     </Box>
@@ -116,6 +116,7 @@ const NavItem = ({ icon, href, children, ...rest }: NavItemProps) => {
         borderRadius="lg"
         role="group"
         cursor="pointer"
+        transitionDuration="0.5s"
         _hover={{
           bg: 'customBlue.500',
           color: 'white',
@@ -127,6 +128,7 @@ const NavItem = ({ icon, href, children, ...rest }: NavItemProps) => {
             fontSize="16"
             _groupHover={{
               color: 'white',
+              transitionDuration: "0.5s",
             }}
             as={icon}
           />

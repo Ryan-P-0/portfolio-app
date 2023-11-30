@@ -13,7 +13,16 @@ interface CardComponentProps {
 const CardComponent = ({ title, description, linkHref, imgSrc }: CardComponentProps) => {
   return (
     <Link href={linkHref} style={{ textDecoration: 'none' }}>
-      <Card w={379} h={379}>
+      <Card
+        w={379}
+        h={379}
+        transitionDuration="0.5s"
+        _hover={{
+          bg: "customBlue.500",
+          color: "white",
+          transform: "scale(1.05)",
+        }}
+      >
         <CardBody>
           <Image src={`/portfolio-app/${imgSrc}`} alt={title} borderRadius='lg' />
           <Stack mt='6' spacing='3'>

@@ -14,7 +14,7 @@ const TechSkills = ({ tech, skills }: TechSkillsProps) => {
             <Image src={`/portfolio-app/${tech}_logo.svg`} alt={`/portfolio-app/${tech}_logo.svg`} w={100} h={100} />
         </Box>
         <Box minW={280}>
-            <Text maxW="400px">{skills}</Text>
+            <Text maxW="400px" fontWeight={500}>{skills}</Text>
         </Box>
     </Flex>
   );
