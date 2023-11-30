@@ -12,7 +12,7 @@ export default function Projects() {
           <CardComponent 
             title="LoadLink" 
             description="A React and WordPress Headless CMS web application for a nation-wide transport company."
-            linkHref="projects/loadlink" 
+            linkHref="/projects/loadlink" 
             imgSrc="loadlink-app.png"
           />
         </WrapItem>

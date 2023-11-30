@@ -1,6 +1,7 @@
 'use client'
 
-import { Card, CardBody, Heading, Stack, Text, Image, Link } from "@chakra-ui/react";
+import { Card, CardBody, Heading, Stack, Text, Image } from "@chakra-ui/react";
+import Link from "next/link";
 
 interface CardComponentProps {
   title: string;
@@ -11,7 +12,7 @@ interface CardComponentProps {
 
 const CardComponent = ({ title, description, linkHref, imgSrc }: CardComponentProps) => {
   return (
-    <Link href={`/portfolio-app/${linkHref}`} style={{ textDecoration: 'none' }}>
+    <Link href={linkHref} style={{ textDecoration: 'none' }}>
       <Card w={379} h={379}>
         <CardBody>
           <Image src={`/portfolio-app/${imgSrc}`} alt={title} borderRadius='lg' />

@@ -8,7 +8,6 @@ import {
   Flex,
   Icon,
   useColorModeValue,
-  Link,
   Drawer,
   DrawerContent,
   useDisclosure,
@@ -16,6 +15,7 @@ import {
   FlexProps,
   Image,
 } from '@chakra-ui/react';
+import Link from 'next/link';
 import {
   FiHome,
   FiStar,
@@ -31,8 +31,8 @@ interface LinkItemProps {
   route: string;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Home', icon: FiHome, route: "/portfolio-app" },
-  { name: 'Projects', icon: FiStar, route: "/portfolio-app/projects" },
+  { name: 'Home', icon: FiHome, route: "/" },
+  { name: 'Projects', icon: FiStar, route: "/projects" },
 ];
 
 export default function SimpleSidebar({ children }: { children: ReactNode }) {
@@ -71,7 +71,7 @@ interface SidebarProps extends BoxProps {
 }
 
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
-  const pathname = usePathname();
+  const currentPath = usePathname().replace("portfolio-app", "").replaceAll("/", "") || "/";
 
   return (
     <Box
@@ -91,8 +91,8 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
           key={link.name} 
           icon={link.icon} 
           href={link.route} 
-          bg={pathname === link.route ? "customBlue.500" : ""} 
-          color={pathname === link.route ? "#FFFFFF" : ""}
+          bg={currentPath.includes(link.route.replaceAll("/", "") || "/") ? "customBlue.500" : ""} 
+          color={currentPath.includes(link.route.replaceAll("/", "") || "/") ? "#FFFFFF" : ""}
         >
           {link.name}
         </NavItem>
@@ -108,7 +108,7 @@ interface NavItemProps extends FlexProps {
 }
 const NavItem = ({ icon, href, children, ...rest }: NavItemProps) => {
   return (
-    <Link href={href} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+    <Link href={href} style={{ textDecoration: 'none' }}>
       <Flex
         align="center"
         p="4"
