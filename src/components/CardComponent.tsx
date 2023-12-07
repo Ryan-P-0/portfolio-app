@@ -1,6 +1,6 @@
 'use client'
 
-import { Card, CardBody, Heading, Stack, Text, Image } from "@chakra-ui/react";
+import { Card, CardBody, Heading, Stack, Text, Image, WrapItem, Center } from "@chakra-ui/react";
 import Link from "next/link";
 
 interface CardComponentProps {
@@ -12,26 +12,28 @@ interface CardComponentProps {
 
 const CardComponent = ({ title, description, linkHref, imgSrc }: CardComponentProps) => {
   return (
-    <Link href={linkHref} style={{ textDecoration: 'none' }}>
-      <Card
-        w={379}
-        h={379}
-        transitionDuration="0.5s"
-        _hover={{
-          bg: "customBlue.500",
-          color: "white",
-          transform: "scale(1.05)",
-        }}
-      >
-        <CardBody>
-          <Image src={`/portfolio-app/${imgSrc}`} alt={title} borderRadius='lg' />
-          <Stack mt='6' spacing='3'>
-            <Heading size='md'>{title}</Heading>
-            <Text>{description}</Text>
-          </Stack>
-        </CardBody>
-      </Card>
-    </Link>
+    <WrapItem>
+      <Center w={{ base: 260, sm: 379 }} h={379}>
+        <Link href={linkHref} style={{ textDecoration: 'none' }}>
+          <Card
+            transitionDuration="0.5s"
+            _hover={{
+              bg: "customBlue.500",
+              color: "white",
+              transform: "scale(1.05)",
+            }}
+          >
+            <CardBody>
+              <Image src={`/portfolio-app/${imgSrc}`} alt={title} borderRadius='lg' />
+              <Stack mt='6' spacing='3'>
+                <Heading size='md'>{title}</Heading>
+                <Text>{description}</Text>
+              </Stack>
+            </CardBody>
+          </Card>
+        </Link>
+      </Center>
+    </WrapItem>
   );
 };
 

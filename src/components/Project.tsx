@@ -13,7 +13,7 @@ interface ProjectProps {
 
 const Project = ({ projectName, projectLink, projectOutline, projectRole, projectFeatures }: ProjectProps) => {
     return (
-        <Box as="main" minH="100vh" p="4">
+        <Box as="main" minH="100vh" p={4}>
             <Box m={{ base: 0, md: 5 }}>
                 <Text as="h1" fontSize={{ base: "2.5em", sm: "3.5em" }} fontWeight={800}>{projectName}</Text>
                 <Box px={{ base: 0, md: 5 }}>

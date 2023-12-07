@@ -1,7 +1,7 @@
 'use client'
 
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { FaLinkedin, FaArrowDown } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import TechSkills from "@/components/TechSkills";
 import Link from "next/link";
 import "./custom.css";
@@ -9,8 +9,8 @@ import "./custom.css";
 export default function Home() {
   return (
     <>
-      <Box as="section" minH="100vh" p={10} pos="relative" backgroundImage="url('/portfolio-app/bg-white.jpg')" backgroundSize="cover" backgroundRepeat="no-repeat">
-        <Box px={10}>
+      <Box as="section" minH="100vh" p={{ base: 4, md: 10 }} pos="relative" backgroundImage="url('/portfolio-app/bg-white.jpg')" backgroundSize="cover" backgroundRepeat="no-repeat">
+        <Box px={{ base: 0, xl: 10 }}>
           <Box as="header">
             <Text as="h1" fontSize={{ base: "1.5em", sm: "3em", md: "3.5em" }} fontWeight={800}>Experienced Web Developer</Text>
             <Text fontWeight={800} color="customBlue.500">Ryan Pittock</Text>
@@ -22,7 +22,7 @@ export default function Home() {
             <Text my={5} maxW="800px" fontWeight={500}>In addition to programming skills: I utilise modern hosting platforms, and I have experience with Linux (which I personally use), meaning VPS hosting is no problem for me.</Text>
             <Text my={5} maxW="800px" fontWeight={500}>I enjoy what I do and prove to be highly adaptable and able to learn new concepts and technologies quickly, while I love to continually grow my skill set in this industry and increase the services I can provide to clients and businesses.</Text>
           </Box>
-          <Flex gap={5} mb={5}>
+          <Flex gap={5} my={5}>
             <a href="https://www.linkedin.com/in/ryan-pittock-61169229b/" target="_blank">
               <FaLinkedin color="#0a66c2" size="2em" />
             </a>
@@ -31,6 +31,7 @@ export default function Home() {
             flexDirection="column"
             alignItems="center"
             gap={3}
+            my={{ base: 10, xl: 0 }}
             pos={{ xl: "absolute" }}
             bottom={{ xl: "130px" }}
             left={{ xl: "50%" }}
