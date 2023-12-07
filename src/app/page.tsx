@@ -32,22 +32,21 @@ export default function Home() {
             alignItems="center"
             gap={3}
             pos={{ xl: "absolute" }}
-            bottom={{ xl: "100px" }}
+            bottom={{ xl: "130px" }}
             left={{ xl: "50%" }}
             transform={{ xl: "translateX(-50%)" }}
           >
-            <Text fontWeight={800} color="customBlue.500">See below for services I provide</Text>
             <Link href="#skills">
               <Box
                 bg="customBlue.500"
-                p={2}
-                borderRadius="50%"
+                py="20px"
+                px="70px"
                 transitionDuration="0.5s"
                 _hover={{
-                  transform: "scale(1.2)",
+                  transform: "scale(1.05)",
                 }}
               >
-                <FaArrowDown size="2em" color="#ffffff" />
+                <Text fontWeight={600} color="#ffffff">SERVICES</Text>
               </Box>
             </Link>
           </Flex>
