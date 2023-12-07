@@ -19,6 +19,7 @@ export default function Home() {
             <Text my={5} maxW="800px" fontWeight={500}>I am an experienced web developer and programmer with a background in React and WordPress.</Text>
             <Text my={5} maxW="800px" fontWeight={500}>I have industry experience working in a web development company on the Gold Coast as part of their development team. Working with this company is what first introduced me to WordPress development since they use it for their projects.</Text>
             <Text my={5} maxW="800px" fontWeight={500}>Due to my particular background in web development: the services I provide to clients are mostly related to headless React applications and WordPress sites; however I can even do backend server-side web programming as well, such as Node.js Express and Python Django to give examples.</Text>
+            <Text my={5} maxW="800px" fontWeight={500}>In addition to programming skills: I utilise modern hosting platforms, and I have experience with Linux (which I personally use), meaning VPS hosting is no problem for me.</Text>
             <Text my={5} maxW="800px" fontWeight={500}>I enjoy what I do and prove to be highly adaptable and able to learn new concepts and technologies quickly, while I love to continually grow my skill set in this industry and increase the services I can provide to clients and businesses.</Text>
           </Box>
           <Flex gap={5} mb={5}>
@@ -61,14 +62,14 @@ export default function Home() {
                 "Create custom functional components and hooks",
                 "Develop headless-CMS applications with WordPress",
                 "Make API calls using query libraries such as React Query",
-                "Develop with Next.js and deploy on Vercel",
+                "Develop with Next.js and deploy on Vercel or a VPS",
                 "Test applications with Cypress",
               ]}
               skillsDescriptions={[
                 "Implement any design and functionality into your app with custom components using the most up-to-date React code. Included in this is custom HTML and CSS layouts and styling such as flexbox, grids, as well as popular frontend frameworks such as Bootstrap, Tailwind CSS, and Chakra UI.",
                 "Combine the power of React and WordPress by creating any kind of React app which can also use WordPress as its content-management system and much more. With headless apps, you can easily create both an app and a standard WordPress site that share the same backend.",
                 "Efficiently pull any kind of API data into your app using the most updated best practices with React fetching libraries such as React Query; this allows your app to add features such as API data caching and more.",
-                "Develop your app with the most popular modern React framework: Next.js. Next is the top recommended way to create a React app according to the offical React docs. The company behind Next.js (Vercel) also provides modern web hosting for your application.",
+                "Develop your app with the most popular modern React framework: Next.js. Next is the top recommended way to create a React app according to the offical React docs. The company behind Next.js (Vercel) also provides modern web hosting for your application; or I can set up a Virtual Private Server (VPS) with DigitalOcean to host your app.",
                 "Applications are fully end-to-end tested using Cypress. I can create tests to gurantee your app is production ready and all of the features function as required.",
               ]}
             />
