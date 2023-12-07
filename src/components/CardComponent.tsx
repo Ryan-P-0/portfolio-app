@@ -24,7 +24,7 @@ const CardComponent = ({ title, description, linkHref, imgSrc }: CardComponentPr
             }}
           >
             <CardBody>
-              <Image src={`/portfolio-app/${imgSrc}`} alt={title} borderRadius='lg' />
+              <Image src={`/${imgSrc}`} alt={title} borderRadius='lg' />
               <Stack mt='6' spacing='3'>
                 <Heading size='md'>{title}</Heading>
                 <Text>{description}</Text>

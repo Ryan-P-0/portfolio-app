@@ -9,7 +9,7 @@ import "./custom.css";
 export default function Home() {
   return (
     <>
-      <Box as="section" minH="100vh" p={{ base: 4, md: 10 }} pos="relative" backgroundImage="url('/portfolio-app/bg-white.jpg')" backgroundSize="cover" backgroundRepeat="no-repeat">
+      <Box as="section" minH="100vh" p={{ base: 4, md: 10 }} pos="relative" backgroundImage="url('/bg-white.jpg')" backgroundSize="cover" backgroundRepeat="no-repeat">
         <Box px={{ base: 0, xl: 10 }}>
           <Box as="header">
             <Text as="h1" fontSize={{ base: "1.5em", sm: "3em", md: "3.5em" }} fontWeight={800}>Experienced Web Developer</Text>

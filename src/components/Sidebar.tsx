@@ -71,7 +71,7 @@ interface SidebarProps extends BoxProps {
 }
 
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
-  const currentPath = usePathname().replace("portfolio-app", "").replaceAll("/", "") || "/";
+  const currentPath = usePathname().replaceAll("/", "") || "/";
 
   return (
     <Box
@@ -83,7 +83,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       h="full"
       {...rest}>
       <Flex h="20" alignItems="center" mx={8} my={14} justifyContent="center">
-        <Image src="/portfolio-app/profile.jpeg" alt="/portfolio-app/profile.jpeg" w={150} h={150} borderRadius="50%" />
+        <Image src="/profile.jpeg" alt="/profile.jpeg" w={150} h={150} borderRadius="50%" />
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
