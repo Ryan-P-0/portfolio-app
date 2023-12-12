@@ -1,7 +1,9 @@
 'use client'
 
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import { MdPhone } from "react-icons/md";
 import TechSkills from "@/components/TechSkills";
 import Link from "next/link";
 import "./custom.css";
@@ -26,6 +28,27 @@ export default function Home() {
             <a href="https://www.linkedin.com/in/ryan-pittock-61169229b/" target="_blank">
               <FaLinkedin color="#0a66c2" size="2em" />
             </a>
+            <a href="https://github.com/Ryan-P-0" target="_blank">
+              <FaGithub size="2em" />
+            </a>
+          </Flex>
+          <Flex flexDirection="column" my={5}>
+            <Flex alignItems="center" gap={2}>
+              <Box>
+                <IoIosMail size="2em" />
+              </Box>
+              <Box>
+                <Text fontWeight={500}>ryandp@mailfence.com</Text>
+              </Box>
+            </Flex>
+            <Flex alignItems="center" gap={2}>
+              <Box>
+                <MdPhone size="2em" />
+              </Box>
+              <Box>
+                <Text fontWeight={500}>04 1165 7805</Text>
+              </Box>
+            </Flex>
           </Flex>
           <Flex
             flexDirection="column"
