@@ -1,5 +1,10 @@
 import SimpleSidebar from "@/components/Sidebar";
 import { Providers } from "./providers";
+import { Montserrat } from "@next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: 'Experienced Web Developer',
@@ -13,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={montserrat.className}>
         <Providers>
           <SimpleSidebar>
             {children}

@@ -83,7 +83,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       h="full"
       {...rest}>
       <Flex h="20" alignItems="center" mx={8} my={14} justifyContent="center">
-        <Image src="/profile.png" alt="/profile.png" w={150} h={150} borderRadius="50%" />
+        <Image src="/profile.jpg" alt="Author Profile" w={150} h={150} borderRadius="50%" />
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (

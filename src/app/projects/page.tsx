@@ -13,7 +13,7 @@ export default function Projects() {
             title="LoadLink" 
             description="A React and WordPress Headless CMS web application for a nation-wide transport company."
             linkHref="/projects/loadlink" 
-            imgSrc="loadlink-app.png"
+            imgSrc="loadlink-app.jpg"
           />
         </Wrap>
       </Box>

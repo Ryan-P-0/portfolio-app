@@ -20,14 +20,14 @@ const Project = ({ projectName, projectLink, projectOutline, projectRole, projec
                     <Flex>
                         <a href={projectLink} target="_blank">
                             <Flex alignItems="center" gap={1}>
-                                <Text color="customBlue.500" fontWeight="bold" decoration="underline">{projectName} Page</Text>
+                                <Text color="customBlue.500" fontWeight={700} decoration="underline">{projectName} Page</Text>
                                 <BsLink45Deg color="#0086ff" size="1.5em" />
                             </Flex>
                         </a>
                     </Flex>
                     <Box>
                         <Box mt={5}>
-                            <Text color="customBlue.500" fontWeight="bold">Project Outline</Text>
+                            <Text color="customBlue.500" fontWeight={700}>Project Outline</Text>
                             {
                                 projectOutline.map((paragraph, index) => (
                                     <Text key={index} mt={index !== 0 ? 2 : 0}>{paragraph}</Text>
@@ -35,7 +35,7 @@ const Project = ({ projectName, projectLink, projectOutline, projectRole, projec
                             }
                         </Box>
                         <Box mt={5}>
-                            <Text color="customBlue.500" fontWeight="bold">My Role in the Project</Text>
+                            <Text color="customBlue.500" fontWeight={700}>My Role in the Project</Text>
                             {
                                 projectRole.map((paragraph, index) => (
                                     <Text key={index} mt={index !== 0 ? 2 : 0}>{paragraph}</Text>
@@ -45,7 +45,7 @@ const Project = ({ projectName, projectLink, projectOutline, projectRole, projec
                     </Box>
                     <Box>
                         <Box mt={5}>
-                            <Text color="customBlue.500" fontWeight="bold">Application Features</Text>
+                            <Text color="customBlue.500" fontWeight={700}>Application Features</Text>
                             <Box as="ul">
                                 {
                                     projectFeatures.map((listItem, index) => (
