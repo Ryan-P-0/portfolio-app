@@ -13,7 +13,6 @@ import {
   useDisclosure,
   BoxProps,
   FlexProps,
-  Image,
 } from '@chakra-ui/react';
 import Link from 'next/link';
 import {
@@ -82,9 +81,8 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       pos="fixed"
       h="full"
       {...rest}>
-      <Flex h="20" alignItems="center" mx={8} my={14} justifyContent="center">
-        <Image src="/profile.jpg" alt="Author Profile" w={150} h={150} borderRadius="50%" />
-        <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
+      <Flex h="20" mx={8}>
+        <CloseButton size="1em" display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
         <NavItem 
