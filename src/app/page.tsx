@@ -14,15 +14,14 @@ export default function Home() {
       <Box as="section" minH="100vh" p={{ base: 4, md: 10 }} pos="relative" backgroundImage="url('/bg-white.jpg')" backgroundSize="cover" backgroundRepeat="no-repeat">
         <Box px={{ base: 0, xl: 10 }}>
           <Box as="header">
-            <Text as="h1" fontSize={{ base: "1.5em", sm: "3em", md: "3.5em" }} fontWeight={800}>Experienced Web Developer</Text>
+            <Text as="h1" fontSize={{ base: "1.5em", sm: "3em", md: "3.5em" }} fontWeight={800}>Experienced Software Developer</Text>
             <Text fontWeight={800} color="customBlue.500">Ryan Pittock</Text>
           </Box>
           <Box as="main">
-            <Text my={5} maxW="800px" fontWeight={500}>I am an experienced web developer and programmer with a background in React and WordPress.</Text>
-            <Text my={5} maxW="800px" fontWeight={500}>I have industry experience working in a web development company on the Gold Coast as part of their development team. Working with this company is what first introduced me to WordPress development since they use it for their projects.</Text>
-            <Text my={5} maxW="800px" fontWeight={500}>Due to my particular background in web development: the services I provide to clients are mostly related to headless React applications and WordPress sites; however I can even do backend server-side web programming as well, such as Node.js Express and Python Django to give examples.</Text>
-            <Text my={5} maxW="800px" fontWeight={500}>In addition to programming skills: I utilise modern hosting platforms, and I have experience with Linux (which I personally use), meaning VPS hosting is no problem for me.</Text>
-            <Text my={5} maxW="800px" fontWeight={500}>I enjoy what I do and prove to be highly adaptable and able to learn new concepts and technologies quickly, while I love to continually grow my skill set in this industry and increase the services I can provide to clients and businesses.</Text>
+            <Text my={5} maxW="800px" fontWeight={500}>Experienced software developer with a background in React, Next, Python, and WordPress.</Text>
+            <Text my={5} maxW="800px" fontWeight={500}>Demonstrated industry experience working with software companies and delivering high-quality code solutions and application features to businesses which solve real-world problems and provide manifest and demonstrable benefits for the client.</Text>
+            <Text my={5} maxW="800px" fontWeight={500}>Due to my particular background in software development, the services I provide to clients are mostly related to React applications, WordPress sites, static site generation (SSG), and back end web applications; however I am able to program in many languages and provide expertise across a broad range of programming languages and software development principles to satisfy a plethora of client needs and requirements.</Text>
+            <Text my={5} maxW="800px" fontWeight={500}>In addition to delivering cutting edge applications and websites, I always utilise the best modern hosting platforms to ensure maximum stability and scalability of your site and provide reliable maintenance, as well as a complete set of SEO strategies to get your site top-ranking within the Google search results. Better rankings = more exposure = more sales.</Text>
           </Box>
           <Flex gap={5} my={5}>
             <a href="https://www.linkedin.com/in/ryan-pittock-61169229b/" target="_blank">
