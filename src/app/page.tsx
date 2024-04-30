@@ -5,13 +5,25 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { MdPhone } from "react-icons/md";
 import TechSkills from "@/components/TechSkills";
+import Image from "next/image";
 import Link from "next/link";
+import bgWhite from "../../public/bg-white.jpg";
 import "./custom.css";
 
 export default function Home() {
   return (
     <>
-      <Box as="section" minH="100vh" p={{ base: 4, md: 10 }} pos="relative" backgroundImage="url('/bg-white.jpg')" backgroundSize="cover" backgroundRepeat="no-repeat">
+      <Box as="section" minH="100vh" p={{ base: 4, md: 10 }} pos="relative">
+        <Image 
+          src={bgWhite}
+          alt="bg-white.jpg"
+          fill
+          sizes="100vw"
+          style={{ 
+            objectFit: "cover",
+            zIndex: "-1",
+          }}
+        />
         <Box px={{ base: 0, xl: 10 }}>
           <Box as="header">
             <Text as="h1" fontSize={{ base: "1.5em", sm: "3em", md: "3.5em" }} fontWeight={800}>Experienced Software Developer</Text>

@@ -41,54 +41,6 @@ export const metadata = {
   ],
 };
 
-// export const metadata: Metadata = {
-//   title: "Elastic Stack, Next.js, Python, JavaScript Tutorials | dminhvu",
-//   description:
-//     "dminhvu.com - Programming blog for everyone to learn Elastic Stack, Next.js, Python, JavaScript, React, Machine Learning, Data Science, and more.",
-//   keywords: [
-//     "elastic",
-//     "python",
-//     "javascript",
-//     "react",
-//     "machine learning",
-//     "data science"
-//   ],
-//   openGraph: {
-//     url: "https://dminhvu.com",
-//     type: "website",
-//     title: "Elastic Stack, Next.js, Python, JavaScript Tutorials | dminhvu",
-//     description:
-//       "dminhvu.com - Programming blog for everyone to learn Elastic Stack, Next.js, Python, JavaScript, React, Machine Learning, Data Science, and more.",
-//     images: [
-//       {
-//         url: "https://dminhvu.com/images/home/thumbnail.png",
-//         width: 1200,
-//         height: 630,
-//         alt: "dminhvu"
-//       }
-//     ]
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "Elastic Stack, Next.js, Python, JavaScript Tutorials | dminhvu",
-//     description:
-//       "dminhvu.com - Programming blog for everyone to learn Elastic Stack, Next.js, Python, JavaScript, React, Machine Learning, Data Science, and more.",
-//     creator: "@dminhvu02",
-//     site: "@dminhvu02",
-//     images: [
-//       {
-//         url: "https://dminhvu.com/images/home/thumbnail.png",
-//         width: 1200,
-//         height: 630,
-//         alt: "dminhvu"
-//       }
-//     ]
-//   },
-//   alternates: {
-//     canonical: "https://dminhvu.com"
-//   }
-// };
-
 export default function RootLayout({
   children,
 }: {
